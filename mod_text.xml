@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" version="3.2.0" method="upgrade">
+
+    <name>MOD_TEXT</name>
+    <author>Andy Kirk</author>
+    <authorEmail>andy.kirk@npeu.ox.ac.uk</authorEmail>
+    <authorUrl>https://www.npeu.ox.ac.uk</authorUrl>
+    <creationDate>June 2019</creationDate>
+    <copyright>(C) NPEU 2019</copyright>
+    <license>MIT License; see LICENSE.md</license>
+
+    <!--  The version string is recorded in the components table -->
+    <version>1.0.0</version>
+    <!-- The description is optional and defaults to the name -->
+    <description>MOD_TEXT_XML_DESCRIPTION</description>
+
+    <updateservers>
+        <!-- Note: No spaces or linebreaks allowed between the server tags -->
+        <server type="extension" name="NPEU: mod_text Update Site">https://raw.githubusercontent.com/NPEU/mod_text/master/update-manifest.xml</server>
+    </updateservers>
+
+    <files>
+        <filename module="mod_text">mod_text.php</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <folder>language</folder>
+        <folder>tmpl</folder>
+    </files>
+
+    <config>
+        <fieldset name="basic">
+            <field
+                name="content"
+                type="editor"
+                label="MOD_TEXT_CONTENT_LABEL"
+                description="MOD_TEXT_CONTENT_DESC"
+                default=""
+                required="true"
+                buttons="false"
+                filter="safehtml"
+            />
+            <fields name="params">
+                <field
+                    name="cta_text"
+                    type="text"
+                    label="MOD_TEXT_CTA_TEXT_LABEL"
+                    description="MOD_TEXT_CTA_TEXT_DESC"
+                    default=""
+                />
+                <field
+                    name="cta_url"
+                    type="url"
+                    label="MOD_TEXT_CTA_URL_LABEL"
+                    description="MOD_TEXT_CTA_URL_DESC"
+                    default=""
+                />
+            </fields>
+        </fieldset>
+    </config>
+
+</extension>
