@@ -37,7 +37,7 @@
                 default=""
                 required="true"
                 buttons="false"
-                filter="safehtml"
+                filter="JComponentHelper::filterText"
             />
             <fields name="params">
                 <field
