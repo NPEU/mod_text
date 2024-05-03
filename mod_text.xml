@@ -22,7 +22,7 @@
     <namespace path="src">NPEU\Module\Text</namespace>
 
     <files>
-        <filename module="mod_text">services</filename>
+        <folder module="mod_text">services</folder>
         <folder>language</folder>
         <folder>src</folder>
         <folder>tmpl</folder>
